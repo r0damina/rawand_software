@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="ShareAP.css" />
+    <title>Shared Apartments</title>
+  </head>
+
+  <body>
+
+<section class="section__container popular__container">
+    <h2 class="section__header">Shared Apartments</h2>
+    <div class="popular__grid">
+
+      <div class="popular__card" id="AP1">
+        <img src="share1.jpg"/>
+        <div class="popular__content">
+          <div class="popular__card__header">
+            <h4>The Plaza</h4>
+            <h4>639 JOD</h4>
+          </div>
+          <p>AMMAN, JORDAN</p>
+          <p>078XXXXXXX</p>
+          <p>4 stars</p>
+          <!-- review button1  -->
+          <button class="review-btn" onclick="openReviewModal('AP1')">Leave a Review</button>
+          <!-- delete button1  -->
+          <button class="delete-review-btn" data-card-id="AP1" onclick="deleteReview('AP1')">Delete Review</button>
+          <!-- Container for reviews -->
+           <div class="reviews-container" id="reviewsAP1"></div>
+        </div>
+      </div>
+
+      <div class="popular__card" id="AP2">
+        <img src="share2.jpg"/>
+        <div class="popular__content">
+          <div class="popular__card__header">
+            <h4>Ritz Paris</h4>
+            <h4>549 JOD</h4>
+          </div>
+          <p>AMMAN, JORDAN</p>
+          <p>078XXXXXXX</p>
+          <p>4 stars</p>
+          <!-- review button1  -->
+          <button class="review-btn" onclick="openReviewModal('AP2')">Leave a Review</button>
+          <!-- delete button2  -->
+          <button class="delete-review-btn" data-card-id="AP2" onclick="deleteReview('AP2')">Delete Review</button>
+          <!-- Container for reviews -->
+           <div class="reviews-container" id="reviewsAP2"></div>
+        </div>
+      </div>
+
+      <div class="popular__card" id="AP3">
+        <img src="share3.jpg"/>
+        <div class="popular__content">
+          <div class="popular__card__header">
+            <h4>The Peninsula</h4>
+            <h4>799 JOD</h4>
+          </div>
+          <p>KHALDA, AMMAN</p>
+          <p>078XXXXXXX</p>
+          <p>4 stars</p>
+           <!-- review button3  -->
+           <button class="review-btn" onclick="openReviewModal('AP3')">Leave a Review</button>
+           <!-- delete button3  -->
+           <button class="delete-review-btn" data-card-id="AP3" onclick="deleteReview('AP3')">Delete Review</button>
+          <!-- Container for reviews -->
+           <div class="reviews-container" id="reviewsAP3"></div>
+        </div>
+      </div>
+      
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <!-- Display details like price, location, review, and contact here -->
+          <span class="close">&times;</span>
+          <h2 id="modalTitle"></h2>
+          <p id="modalLocation"></p>
+          <p id="modalPrice"></p>
+          <p id="modalReview"></p>
+          <p id="modalContact"></p>
+        </div>
+      </div>
+
+  </section>
+
+  <script src="FUNCshare.js"></script>
+  
+  <!-- the hidden text box to leave review -->
+<div id="reviewModal" class="modal">
+  <div class="modal-content">
+     <span class="close" onclick="closeReviewModal()">&times;</span>
+     <h2>Leave a Review</h2>
+     <textarea id="reviewText" rows="4" placeholder="Write your review..."></textarea>
+     <button onclick="submitReview()">Submit Review</button>
+  </div>
+</div>
+
+
+</body>
+
+  </html>
